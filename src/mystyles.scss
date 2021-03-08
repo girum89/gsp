@@ -1,0 +1,180 @@
+/* You can add global styles to this file, and also import other style files */
+@charset "utf-8";
+
+// Import a Google Font
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+
+// Set your brand colors
+
+
+// Update Bulma's global variables
+
+
+
+// Update some of Bulma's component variables
+
+  .paddedcontainer{
+     padding-left: 1em;
+     padding-right: 1em;
+     padding-bottom: 0.5em;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     flex-wrap: wrap;
+
+  }
+  .mycontainer{
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 0.5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    flex-wrap: wrap;
+    list-style-type: none;
+  }
+  .inputpad{
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 0.5em
+  }
+  .myapp-no-padding-dialog .mat-dialog-container {
+      padding: 0;
+      background-color: #EFF0EB;
+    }
+  
+  
+  
+  .organelle {
+      position: relative;
+      margin: 0 0 2em 0;
+      list-style-type: none;
+      padding: 0;
+      width: 30em;
+    }
+    .organelle li {
+      cursor: pointer;
+      position: relative;
+      left: 0;
+      margin: 1em;
+      padding: .5em 0;
+      height: 1.8em;
+      border-radius: 4px;
+      color:rgb(80, 124, 153);
+    }
+    .organelle li:hover {
+     visibility: hidden 10%;
+      
+    }
+    .organelle a {
+        color: #333;
+        text-decoration: none;
+        position: relative;
+        display: block;
+        
+      }
+    .organelle li.selected {
+      background-color: #CFD8DC;
+      color: white;
+    }
+    .organelle li.selected:hover {
+      background-color: #BBD8DC;
+      color: white;
+    }
+    .loader-container {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background: rgb(247, 243, 243);
+      opacity: 0.9;
+      z-index: 99;
+    }
+  
+    .mat-progress-spinner circle, .mat-spinner circle {
+      stroke:hsl(204, 86%, 53%)
+    }
+    .itemtop{
+      border: 3px solid black;
+      display:flex;    
+      align-items:baseline;
+    }
+    .level-align{
+      
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: end;
+      justify-items: auto;
+     
+      
+    }
+    .content-sidemessage{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content:center; 
+          
+    }
+    .content-sidemessage > *:nth-child(1){
+      flex: 1 1 80%;
+    }
+    .content-sidemessage > *:nth-child(2){
+      flex: 1 1 20%;
+      max-height: 10em;
+      flex-direction: column;
+    }
+    .resultshow{
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    .org {
+      position: relative;
+      margin: 0 0 2em 0;
+      list-style-type: none;
+      padding: 0;
+      width: 30em;
+    }
+    .org li {
+      cursor: pointer;
+      position: relative;
+      left: 0;
+      margin: 1em;
+      padding: .5em 0;
+      height: 1.8em;
+      border-radius: 4px;
+      color:rgb(80, 124, 153);
+    }
+    .org li:hover {
+     visibility: hidden 10%;
+      
+    }
+    .org a {
+        color: #333;
+        text-decoration: none;
+        position: relative;
+        display: block;
+        
+      }
+    .org li.selected {
+      background-color: #CFD8DC;
+      color: white;
+    }
+    .org li.selected:hover {
+      background-color: #BBD8DC;
+      color: white;
+    }
+    .resultdiv{
+      margin : -1em;
+      min-width: 5em;
+      max-height: 35em;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      overflow: auto;
+      list-style-type: none;
+    }
+    .resultdiv li{
+      padding-bottom: 0.5em;
+      color: rgb(6, 59, 128) ;
+      
+    }

@@ -1,0 +1,46 @@
+
+   
+  <p mat-dialog-title>Organelle References</p>
+    <p class="control has-icons-left">
+        <input class="input" id="btnsearch" type="text" placeholder="Search" [(ngModel)]="searchTerm">
+        <span class="icon is-left">
+        <i class="fa fa-search" aria-hidden="true"></i>
+        </span>
+    </p>
+    <mat-dialog-content class="mat-typography">
+        <div class="level-align">
+            <div class="column is-two-fifths">
+                <ul class="organelle">
+                    <li *ngFor="let organelle of organelles | organelleFilter:searchTerm" >
+                        <div class="tags has-addons">
+                            <span class="tag is-info">{{organelle.accession}}</span>
+                            <span class="tag">{{organelle.organismName}}</span>
+                            <a class="tag"><i class="fa fa-plus-square" (click)="add(organelle)"></i></a>
+                        </div>
+                    </li>
+                 
+                </ul>  
+            </div>
+            <div class="column is-1"></div>
+            <div class="column is-two-fifths">
+                <ul class="organelle">
+                    
+                    <li *ngFor="let organelle of selectedOrganelle" >
+                        <div class="control">
+                            <div class="tags has-addons">
+                            <span class="tag is-info">{{organelle.accession}}</span>
+                            <span class="tag">{{organelle.organismName}}</span>
+                            <a class="tag is-delete" (click)="remove(organelle)"></a>
+                            </div>
+                      </div>
+                    </li>
+                </ul>  
+            </div>
+        </div>
+    </mat-dialog-content>
+    
+        <mat-dialog-actions align='center'>
+            <button  mat-raised-button (click)="onCancel()">Cancel</button>
+            <button  mat-raised-button (click)="clear()">Clear</button>
+            <button  mat-raised-button [mat-dialog-close]="selectedOrganelle" cdkFocusInitial>Ok</button>
+        </mat-dialog-actions> 

@@ -1,0 +1,38 @@
+@import './mystyles.scss';
+
+@import '~bulma/bulma.sass';
+
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+body { 
+  font-family: Roboto, Arial, sans-serif;
+  margin: 0;
+}
+
+.basic-container {
+  padding: 30px;
+}
+
+.version-info {
+  font-size: 8pt;
+  float: right;
+}
+
+// This fixes https://github.com/angular/components/issues/4609
+.mat-dialog-overridee {
+  mat-dialog-container {
+    > :first-child {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      min-height: inherit;
+    }
+    mat-dialog-content,
+    div[mat-dialog-content] {
+      flex-grow: 1;
+      max-height: unset;
+    }
+  }
+}
+
+  
